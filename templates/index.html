@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container">
+    <h1>Summarize an Article</h1>
+    <div class = 'row row-lg'>
+        <div class='col col-lg-6'>
+            <p class='text-justify'>Paste the long form text to summarize. Summation using the T5-small network from <code>huggingface/transformers</code> library.</p>
+        </div>
+        <div class='col col-lg-10'>
+            <form action="{{url_for('api_summarize')}}" method="POST">
+                <div class="form-group form-group-lg">
+                    <textarea id="text" class="form-control input-large" name="text" placeholder="Your text goes here"></textarea>
+                </div>
+                <button class="btn btn-secondary" type="submit">Summarize</button>
+            </form>
+        </div>
+    </div>
+</div>
